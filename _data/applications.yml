@@ -382,3 +382,23 @@ scap:
     for RHEL 10 and CentOS Stream 10. Scan hosts and container images against
     SCAP Security Guide profiles, tailor rules to your environment, and download
     or apply remediation scripts — directly from the Cockpit browser console.
+
+explorer:
+  title: Explorer
+  source: https://github.com/ismetozalp/explorer
+  issues: https://github.com/ismetozalp/explorer/issues
+  license: Apache-2.0
+  description: |
+    A file manager for the Cockpit console: multi-tab and two-pane browsing,
+    search, previews, a Monaco/Quill editor, integrated terminals with tmux,
+    and GitHub integration via the `gh` CLI.
+
+iftv:
+  title: InFlight TV
+  source: https://github.com/ismetozalp/iftv
+  issues: https://github.com/ismetozalp/iftv/issues
+  license: Apache-2.0
+  description: |
+    An IPTV client for the Cockpit console: Live TV, movies, series, an EPG
+    guide grid, and multi-account tabs from Xtream Codes or M3U sources,
+    remuxed/transcoded on the host with `ffmpeg` and streamed as HLS.
