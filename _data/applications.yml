@@ -402,3 +402,27 @@ iftv:
     An IPTV client for the Cockpit console: Live TV, movies, series, an EPG
     guide grid, and multi-account tabs from Xtream Codes or M3U sources,
     remuxed/transcoded on the host with `ffmpeg` and streamed as HLS.
+    
+ctop:
+  title: Cockpit Top
+  source: https://github.com/ismetozalp/ctop
+  issues: https://github.com/ismetozalp/ctop/issues
+  license: Apache-2.0
+  description: |
+    A btop-style system monitor for the Cockpit console: per-core CPU with
+    braille graphs, memory/disk/network meters, GPU and hwmon sensors, live
+    podman/docker container stats, and a sortable process table with
+    kill/signal, tree view, and deep-links into Cockpit. Plain ES modules and
+    `<canvas>`, no framework and no runtime dependencies.
+
+manifest:
+  title: Manifest
+  source: https://github.com/ismetozalp/manifest
+  issues: https://github.com/ismetozalp/manifest/issues
+  license: Apache-2.0
+  description: |
+    A download manager for the Cockpit console: torrents, magnets, and
+    HTTP/FTP/Metalink files driven by a turnkey-provisioned, per-user `aria2c`
+    daemon. Pure HTML/CSS/JS with no build step and no server daemon of its
+    own, with "Open folder" deep-links into Explorer and Cockpit's built-in
+    Files.
