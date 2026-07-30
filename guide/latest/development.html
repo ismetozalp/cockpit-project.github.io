@@ -732,16 +732,16 @@ connection will be established with the server to relay the component&#8217;s
 message stream.</p>
 </div>
 <div class="paragraph">
-<p>Cockpit components are HTML files contained in <a href="#packages">packages</a>.
+<p>Cockpit components are HTML files contained in <a href="#">packages</a>.
 These can be placed in an iframe or web browser window. Each documented
 and stable component has a well-known URL and these are documented in
-the <a href="#development">API reference</a>. Each component URL begins with the
+the <a href="#">API reference</a>. Each component URL begins with the
 string <code>/cockpit/@localhost/</code> followed a package name, and then the
 component itself.</p>
 </div>
 <div class="paragraph">
-<p>For example the <a href="#api-terminal-html">terminal.html</a> in the
-<a href="#api-system">system</a> package, has this URL:
+<p>For example the <a href="#">terminal.html</a> in the
+<a href="#">system</a> package, has this URL:
 <code>/cockpit/@localhost/system/terminal.html</code></p>
 </div>
 <div class="listingblock">
@@ -954,9 +954,10 @@ in. This field overrides that name.</p>
 </dd>
 <dt class="hdlist1">priority</dt>
 <dd>
-<p>An optional number that specifies which package is preferred in cases
+<p>An optional integer that specifies which package is preferred in cases
 where there are conflicts. For example given two packages with the
-same <code>name</code> a package is chosen based on its priority.</p>
+same <code>name</code> a package is chosen based on its priority. A higher integer
+means higher priority.</p>
 </dd>
 <dt class="hdlist1">conditions</dt>
 <dd>
@@ -988,7 +989,7 @@ loaded immediately after the user logs in, and the initialization code
 of the component is invoked.
 +
 The value of this field is an array of strings, where each string is
-one of the keys used in the <code>dashboard</code>, <code>menu</code>, or <code>tool</code>
+one of the keys used in the <code>dashboard</code>, <code>menu</code>, or <code>tools</code>
 fields that are explained below.</p>
 </dd>
 <dt class="hdlist1">parent</dt>
@@ -1059,8 +1060,8 @@ following properties:</p>
 </dd>
 <dt class="hdlist1">order</dt>
 <dd>
-<p>An optional order number to place this menu item or tool. Lower
-numbers are listed first.</p>
+<p>An optional order integer to place this menu item or tool. Lower
+integers are listed first.</p>
 </dd>
 <dt class="hdlist1">path</dt>
 <dd>
@@ -1216,7 +1217,7 @@ HTML from the <code>latest</code> package:</p>
 </div>
 <div class="paragraph">
 <p>Do not assume you can link to any file in any other package. Refer to
-the <a href="#development">list of API packages</a> for those that are available
+the <a href="#">list of API packages</a> for those that are available
 for use.</p>
 </div>
 </div>
@@ -1252,7 +1253,7 @@ explicitly documented should be used.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#development">API Listing</a></p>
+<p><a href="#">API Listing</a></p>
 </li>
 </ul>
 </div>
@@ -1264,7 +1265,7 @@ a script tag. Alternatively you can use an javascript loader.</p>
 <div class="sect2">
 <h3 id="package-bridges">Bridges for specific tasks</h3>
 <div class="paragraph">
-<p>On the server side the <a href="#cockpit-bridge.1"><code>cockpit-bridge</code></a>
+<p>On the server side the <a href="cockpit-bridge.1.html">cockpit-bridge</a>(1)
 connects to various system APIs that the front end UI requests it to.
 There are additional bridges for specific tasks that the main
 <code>cockpit-bridge</code> cannot handle, such as using the PCP C library API.</p>
@@ -1439,7 +1440,7 @@ URLs.</p>
 <h3 id="urls-components">Component URLs</h3>
 <div class="paragraph">
 <p>Cockpit components are HTML documents. They are organized into
-<a href="#packages">packages</a>. Each package contains information about which
+<a href="#">packages</a>. Each package contains information about which
 HTML components are available in that package. Components should always
 use relative URLs to access resources, such as images, scripts or CSS
 files, even if they refer to a resource in another package.</p>
@@ -1458,13 +1459,13 @@ below:</p>
 </div>
 <div class="paragraph">
 <p>All resource URLs are under the <code>/cockpit</code> namespace. In cases where a
-Cockpit component is being <a href="#embedding">embedded</a> the <code>/cockpit</code>
+Cockpit component is being <a href="#">embedded</a> the <code>/cockpit</code>
 may be followed by a plus sign and another <code>embedder</code> specific
 identifier.</p>
 </div>
 <div class="paragraph">
 <p>What follows is either a <code>@host</code> or <code>$checksum</code> which tells cockpit
-where to <a href="#packages">find the package</a>. Checksums are used when more
+where to <a href="#">find the package</a>. Checksums are used when more
 than one host has identical packages and the resources can be cached.</p>
 </div>
 <div class="paragraph">
@@ -1495,8 +1496,8 @@ Only refer to resources in packages on the same host.</p>
 <p>The above Component URLs are usually not visible to the user. Instead
 the Cockpit Web Service wraps the components in a shell which allows
 navigation, and provides bookmarkable clean URLs to the component. These
-URLs do not affect <a href="#embedding">embedders</a> or
-<a href="#packages">components</a> directly.</p>
+URLs do not affect <a href="#">embedders</a> or
+<a href="#">components</a> directly.</p>
 </div>
 <div class="paragraph">
 <p>If no path is present then the Cockpit will redirect to the default page
@@ -1508,7 +1509,7 @@ component is being shown from a non-local host.</p>
 </div>
 <div class="paragraph">
 <p>The next segment of the path, (or first if the component is being shown
-on the local host) is the <a href="#packages">package name</a>. The remainder of
+on the local host) is the <a href="#">package name</a>. The remainder of
 the path is a component file in the package. If no further path segments
 are present, a default <code>index.html</code> component in the package is
 loaded. An extension of <code>.html</code> is automatically appended.</p>
@@ -4199,7 +4200,7 @@ version 318, the first item in this list is the primary group.</p>
 <div class="paragraph">
 <p><code>cockpit.user()</code> is soft-deprecated since Cockpit 336, if your page
 does not need to maintain compatibility with older Cockpit versions you
-can use<a href="#cockpit-info">cockpit.info</a> to obtain the user information.</p>
+can use <a href="#cockpit-info">cockpit.info</a> to obtain the user information.</p>
 </div>
 </td>
 </tr>
@@ -4298,7 +4299,7 @@ the manifests at the <code>cockpit.manifests</code> global variable.</p>
 <h3 id="_cockpit_js_metrics">cockpit.js: Metrics</h3>
 <div class="paragraph">
 <p>Metrics about the system can be retrieved from several sources using
-<a href="#cockpit-metrics"><code>cockpit.metrics()</code></a> metrics channels. The
+<a href="#cockpit-metrics-function"><code>cockpit.metrics()</code></a> metrics channels. The
 metrics are made available as series data, and can be used with the
 <a href="#cockpit-series"><code>cockpit.series()</code></a> and
 <a href="#cockpit-grid"><code>cockpit.grid()</code></a> facilities.</p>
@@ -5395,7 +5396,7 @@ logged in user.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-06-23 13:37:26 UTC
+Last updated 2026-07-30 14:19:47 UTC
 </div>
 </div>
 </body>

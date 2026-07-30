@@ -466,7 +466,7 @@ can associate certificates to users.</p>
 <div class="paragraph">
 <p>To authenticate users from a Identity Management domain, the server that
 Cockpit is running on must be joined to that domain. See the
-<a href="#sso-server">SSO server requirements</a> for details.</p>
+<a href="sso.html#sso-server">SSO server requirements</a> for details.</p>
 </div>
 </div>
 </div>
@@ -634,7 +634,7 @@ CA:</p>
 </div>
 <div class="paragraph">
 <p>Certificate authentication needs to be enabled in
-<a href="./cockpit.conf.5.html">cockpit.conf</a> explicitly:</p>
+<a href="cockpit.conf.5.html">cockpit.conf</a>(5) explicitly:</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -666,7 +666,7 @@ action = none</pre>
 <div class="paragraph">
 <p>When using certificate authentication, all requests with a particular
 certificate will be handled by a separate and isolated instance of the
-<a href="./cockpit-ws.8.html">cockpit-ws</a> web server. This protects against
+<a href="cockpit-ws.8.html">cockpit-ws</a>(8) web server. This protects against
 possible vulnerabilities in the web server and prevents an attacker from
 impersonating another user. However, this introduces a potential Denial
 of Service: Some remote attacker could create a large number of
@@ -799,7 +799,7 @@ a future version.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-06-23 13:37:26 UTC
+Last updated 2026-07-30 14:19:47 UTC
 </div>
 </div>
 </body>

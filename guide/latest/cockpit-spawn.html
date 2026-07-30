@@ -521,7 +521,7 @@ even if the data doesn&#8217;t match the batch size. Defaults to zero.</p>
 <p>Set to <code>"require"</code> to spawn the process as root instead of the
 logged in user. If the currently logged in user is not permitted to
 become root (eg: via <code>pkexec</code>) then the <code>client</code> will immediately
-be <a href="#cockpit-dbus-onclose">closed</a> with a <code>"access-denied"</code>
+be <a href="cockpit-dbus.html#cockpit-dbus-onclose">closed</a> with a <code>"access-denied"</code>
 problem code.
 +
 Set to <code>"try"</code> to try to run the process as root, but if that fails,
@@ -639,7 +639,7 @@ will contain the standard error output of the process.</p>
 </dd>
 <dt class="hdlist1"><code>problem</code></dt>
 <dd>
-<p>A <a href="#cockpit-problems">problem code</a> string when a problem occurred
+<p>A <a href="cockpit-error.html#cockpit-problems">problem code</a> string when a problem occurred
 starting or communicating with the process. This is <code>null</code> if the
 process exited or was terminated.</p>
 </dd>
@@ -724,7 +724,7 @@ closed.</p>
 <div class="paragraph">
 <p>Close the process by closing its standard input and output. If
 <code>problem</code> is specified it should be a standard
-<a href="#cockpit-problems">problem code</a> string. In this case the process
+<a href="cockpit-error.html#cockpit-problems">problem code</a> string. In this case the process
 will be terminated with a signal.</p>
 </div>
 </div>
@@ -732,7 +732,7 @@ will be terminated with a signal.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-06-23 13:37:26 UTC
+Last updated 2026-07-30 14:19:47 UTC
 </div>
 </div>
 </body>

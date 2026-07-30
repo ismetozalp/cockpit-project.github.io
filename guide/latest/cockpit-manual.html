@@ -573,7 +573,7 @@ The bridge is started like a shell once per Linux user session.</p>
 <div class="sect2">
 <h3 id="_see_also">See also</h3>
 <div class="paragraph">
-<p><strong>cockpit-tls(8)</strong> , <strong>cockpit.bridge(1)</strong> , <strong>systemd(1)</strong>, <strong><a href="https://cockpit-project.org/guide/latest">Cockpit guide</a></strong></p>
+<p><a href="cockpit-tls.8.html">cockpit-tls</a>(8) , <a href="cockpit-bridge.1.html">cockpit-bridge</a>(1) , systemd(1), <strong><a href="https://docs.cockpit-project.org/cockpit-guide/latest">Cockpit guide</a></strong></p>
 </div>
 </div>
 </div>
@@ -733,7 +733,7 @@ be used. For example <code>/cockpit-new/</code> is ok. <code>/cockpit/</code> an
 <p>If true, enable TLS client certificates for authenticating users.
 Commonly these are provided by a smart card, but it&#8217;s equally possible
 to import certificates directly into the web browser. Please see the
-<a href="https://cockpit-project.org/guide/latest/cert-authentication.html">Certificate/smart
+<a href="https://docs.cockpit-project.org/cockpit-guide/latest/guide/cert-authentication.html">Certificate/smart
 card authentication</a> section in the Cockpit guide for details.</p>
 </dd>
 <dt class="hdlist1"><strong>Shell</strong></dt>
@@ -864,7 +864,7 @@ WarnBeforeConnecting=false</code></pre>
 <div class="sect2">
 <h3 id="_see_also_2">See also</h3>
 <div class="paragraph">
-<p><strong>cockpit-ws(8)</strong>, <strong>cockpit-tls(8)</strong></p>
+<p><a href="cockpit-ws.8.html">cockpit-ws</a>(8), <a href="cockpit-tls.8.html">cockpit-tls</a>(8)</p>
 </div>
 </div>
 </div>
@@ -890,12 +890,12 @@ WarnBeforeConnecting=false</code></pre>
 <div class="paragraph">
 <p>The <strong>cockpit-ws</strong> program is the web service component used for
 communication between the browser application and various configuration
-tools and services like <strong>cockpit-bridge(1)</strong>.</p>
+tools and services like <a href="cockpit-bridge.1.html">cockpit-bridge</a>(1).</p>
 </div>
 <div class="paragraph">
 <p>Users or administrators should never need to start this program as it
-automatically started by <strong>systemd(1)</strong> on bootup, through
-<strong>cockpit-tls(8)</strong>.</p>
+automatically started by systemd(1) on bootup, through
+<a href="cockpit-tls.8.html">cockpit-tls</a>(8).</p>
 </div>
 </div>
 <div class="sect2">
@@ -905,13 +905,13 @@ automatically started by <strong>systemd(1)</strong> on bootup, through
 terminating proxy, and only deals with unencrypted HTTP by itself. But
 for backwards compatibility it can also handle TLS connections by itself
 when being run directly. For details how to configure certificates,
-please refer to the <strong>cockpit-tls(8)</strong> documentation.</p>
+please refer to the <a href="cockpit-tls.8.html">cockpit-tls</a>(8) documentation.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_timeout">Timeout</h3>
 <div class="paragraph">
-<p>When started via <strong>systemd(1)</strong> then <strong>cockpit-ws</strong> will exit after 90
+<p>When started via systemd(1) then <strong>cockpit-ws</strong> will exit after 90
 seconds if nobody logs in, or after the last user is disconnected.</p>
 </div>
 </div>
@@ -948,7 +948,7 @@ activation, and this option has no effect. In that case, update the
 that does the TLS termination. Then Cockpit puts https:// URLs into
 the default <strong>Content-Security-Policy</strong>, and accepts only https://
 origins, instead of http: ones by default. However, if <strong>Origins</strong> is
-set in the <strong>cockpit.conf(5)</strong> configuration file, it will override
+set in the <a href="cockpit.conf.5.html">cockpit.conf</a>(5) configuration file, it will override
 this default.</p>
 </dd>
 <dt class="hdlist1"><strong>--local-ssh</strong></dt>
@@ -996,7 +996,7 @@ can access the session!</p>
 <p>The <strong>cockpit-ws</strong> process will use the <strong>XDG_CONFIG_DIRS</strong> environment
 variable from the
 <a href="https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html">XDG
-basedir spec</a> to find its <strong>cockpit.conf(5)</strong> configuration file.</p>
+basedir spec</a> to find its <a href="cockpit.conf.5.html">cockpit.conf</a>(5) configuration file.</p>
 </div>
 <div class="paragraph">
 <p>In addition the <strong>XDG_DATA_DIRS</strong> environment variable from the
@@ -1021,7 +1021,7 @@ from. These are the files that are served to a non-logged in user.</p>
 <div class="sect2">
 <h3 id="_see_also_3">See also</h3>
 <div class="paragraph">
-<p><strong>cockpit-tls(8)</strong> , <strong>cockpit.conf(5)</strong> , <strong>systemd(1)</strong></p>
+<p><a href="cockpit-tls.8.html">cockpit-tls</a>(8) , <a href="cockpit.conf.5.html">cockpit.conf</a>(5) , systemd(1)</p>
 </div>
 </div>
 </div>
@@ -1045,7 +1045,7 @@ from. These are the files that are served to a non-logged in user.</p>
 <h3 id="_description_4">Description</h3>
 <div class="paragraph">
 <p>The <strong>cockpit-tls</strong> program is a TLS terminating HTTP proxy for
-<strong>cockpit-ws(8)</strong>. It manages a set of isolated cockpit-ws instances,
+<a href="cockpit-ws.8.html">cockpit-ws</a>(8). It manages a set of isolated cockpit-ws instances,
 one per TLS client certificate, plus one for TLS without a client
 certificate, and one for unencrypted HTTP. With that, one session cannot
 tamper with another one through possible security vulnerability
@@ -1053,7 +1053,7 @@ exploits.</p>
 </div>
 <div class="paragraph">
 <p>Users or administrators should never need to start this program as it
-automatically started by <strong>systemd(1)</strong> via socket activation.</p>
+automatically started by systemd(1) via socket activation.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1062,7 +1062,7 @@ automatically started by <strong>systemd(1)</strong> via socket activation.</p>
 <p>To specify the TLS certificate the web service should use, simply drop a
 file with the extension <strong>.cert</strong> in the <strong>/etc/cockpit/ws-certs.d</strong>
 directory, or below <strong>$XDG_CONFIG_DIRS</strong> if set (see
-<a href="./cockpit.conf.5.html">cockpit.conf</a>). If there are multiple files
+<a href="cockpit.conf.5.html">cockpit.conf</a>(5)). If there are multiple files
 in this directory, then the highest priority one is chosen after
 sorting.</p>
 </div>
@@ -1159,7 +1159,7 @@ client certificates. This variable is normally set by the
 <p>In addition, <strong>cockpit-tls</strong> will use the <strong>XDG_CONFIG_DIRS</strong>
 environment variable from the
 <a href="https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html">XDG
-basedir spec</a> to find its certificates and the <strong>cockpit.conf(5)</strong>
+basedir spec</a> to find its certificates and the <a href="cockpit.conf.5.html">cockpit.conf</a>(5)
 configuration file.</p>
 </div>
 </div>
@@ -1179,7 +1179,7 @@ configuration file.</p>
 <div class="sect2">
 <h3 id="_see_also_4">See also</h3>
 <div class="paragraph">
-<p><strong>cockpit-ws(8)</strong> , <strong>cockpit.conf(5)</strong> , <strong>systemd(1)</strong></p>
+<p><a href="cockpit-ws.8.html">cockpit-ws</a>(8) , <a href="cockpit.conf.5.html">cockpit.conf</a>(5) , systemd(1)</p>
 </div>
 </div>
 </div>
@@ -1205,7 +1205,7 @@ configuration file.</p>
 <p>The <strong>cockpit-desktop</strong> program provides secure access to Cockpit pages
 in an already running desktop session. It starts a web server
 (<strong>cockpit-ws</strong>) and a web browser in an isolated network namespace, and
-a <strong>cockpit-bridge(8)</strong> in the running user session.</p>
+a <a href="cockpit-bridge.1.html">cockpit-bridge</a>(1) in the running user session.</p>
 </div>
 <div class="paragraph">
 <p>This avoids having to log into Cockpit, and having to enable
@@ -1216,7 +1216,7 @@ access this local web server.</p>
 <div class="paragraph">
 <p><strong>URLPATH</strong> is the Cockpit page to open, i. e. the path component of
 Cockpit URLs. It is highly recommended to only open a
-<a href="https://cockpit-project.org/guide/latest/embedding.html">particular page frame</a>, not the entire Cockpit navigation and menu. For example, the
+<a href="https://docs.cockpit-project.org/cockpit-guide/latest/guide/embedding.html">particular page frame</a>, not the entire Cockpit navigation and menu. For example, the
 path <code>/cockpit/@localhost/storage/index.html</code> will open the Storage
 page. It is also possible to give abbreviated forms of urls, such as
 &#8220;/storage&#8221; or &#8220;/network/firewall&#8221;.</p>
@@ -1255,7 +1255,7 @@ alternatives.</p>
 <div class="sect2">
 <h3 id="_see_also_5">See also</h3>
 <div class="paragraph">
-<p><strong>cockpit-ws(8)</strong>, <strong>cockpit-bridge(1)</strong></p>
+<p><a href="cockpit-ws.8.html">cockpit-ws</a>(8), <a href="cockpit-bridge.1.html">cockpit-bridge</a>(1)</p>
 </div>
 </div>
 </div>
@@ -1331,7 +1331,7 @@ packages available to the user running this command.</p>
 <div class="sect2">
 <h3 id="_see_also_6">See also</h3>
 <div class="paragraph">
-<p><strong>cockpit-ws(8)</strong></p>
+<p><a href="cockpit-ws.8.html">cockpit-ws</a>(8)</p>
 </div>
 </div>
 </div>
@@ -1406,7 +1406,7 @@ password.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-06-23 13:37:26 UTC
+Last updated 2026-07-30 14:19:47 UTC
 </div>
 </div>
 </body>

@@ -593,9 +593,10 @@ in. This field overrides that name.</p>
 </dd>
 <dt class="hdlist1">priority</dt>
 <dd>
-<p>An optional number that specifies which package is preferred in cases
+<p>An optional integer that specifies which package is preferred in cases
 where there are conflicts. For example given two packages with the
-same <code>name</code> a package is chosen based on its priority.</p>
+same <code>name</code> a package is chosen based on its priority. A higher integer
+means higher priority.</p>
 </dd>
 <dt class="hdlist1">conditions</dt>
 <dd>
@@ -627,7 +628,7 @@ loaded immediately after the user logs in, and the initialization code
 of the component is invoked.
 +
 The value of this field is an array of strings, where each string is
-one of the keys used in the <code>dashboard</code>, <code>menu</code>, or <code>tool</code>
+one of the keys used in the <code>dashboard</code>, <code>menu</code>, or <code>tools</code>
 fields that are explained below.</p>
 </dd>
 <dt class="hdlist1">parent</dt>
@@ -698,8 +699,8 @@ following properties:</p>
 </dd>
 <dt class="hdlist1">order</dt>
 <dd>
-<p>An optional order number to place this menu item or tool. Lower
-numbers are listed first.</p>
+<p>An optional order integer to place this menu item or tool. Lower
+integers are listed first.</p>
 </dd>
 <dt class="hdlist1">path</dt>
 <dd>
@@ -859,7 +860,7 @@ HTML from the <code>latest</code> package:</p>
 </div>
 <div class="paragraph">
 <p>Do not assume you can link to any file in any other package. Refer to
-the <a href="#development">list of API packages</a> for those that are available
+the <a href="development.html">list of API packages</a> for those that are available
 for use.</p>
 </div>
 </div>
@@ -899,7 +900,7 @@ explicitly documented should be used.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#development">API Listing</a></p>
+<p><a href="development.html">API Listing</a></p>
 </li>
 </ul>
 </div>
@@ -913,7 +914,7 @@ a script tag. Alternatively you can use an javascript loader.</p>
 <h2 id="package-bridges">Bridges for specific tasks</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>On the server side the <a href="#cockpit-bridge.1"><code>cockpit-bridge</code></a>
+<p>On the server side the <a href="cockpit-bridge.1.html">cockpit-bridge</a>(1)
 connects to various system APIs that the front end UI requests it to.
 There are additional bridges for specific tasks that the main
 <code>cockpit-bridge</code> cannot handle, such as using the PCP C library API.</p>
@@ -1078,7 +1079,7 @@ this:</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-06-23 13:37:26 UTC
+Last updated 2026-07-30 14:19:47 UTC
 </div>
 </div>
 </body>

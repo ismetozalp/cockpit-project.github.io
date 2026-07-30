@@ -461,7 +461,7 @@ URLs.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Cockpit components are HTML documents. They are organized into
-<a href="#packages">packages</a>. Each package contains information about which
+<a href="packages.html">packages</a>. Each package contains information about which
 HTML components are available in that package. Components should always
 use relative URLs to access resources, such as images, scripts or CSS
 files, even if they refer to a resource in another package.</p>
@@ -480,13 +480,13 @@ below:</p>
 </div>
 <div class="paragraph">
 <p>All resource URLs are under the <code>/cockpit</code> namespace. In cases where a
-Cockpit component is being <a href="#embedding">embedded</a> the <code>/cockpit</code>
+Cockpit component is being <a href="embedding.html">embedded</a> the <code>/cockpit</code>
 may be followed by a plus sign and another <code>embedder</code> specific
 identifier.</p>
 </div>
 <div class="paragraph">
 <p>What follows is either a <code>@host</code> or <code>$checksum</code> which tells cockpit
-where to <a href="#packages">find the package</a>. Checksums are used when more
+where to <a href="packages.html">find the package</a>. Checksums are used when more
 than one host has identical packages and the resources can be cached.</p>
 </div>
 <div class="paragraph">
@@ -519,8 +519,8 @@ Only refer to resources in packages on the same host.</p>
 <p>The above Component URLs are usually not visible to the user. Instead
 the Cockpit Web Service wraps the components in a shell which allows
 navigation, and provides bookmarkable clean URLs to the component. These
-URLs do not affect <a href="#embedding">embedders</a> or
-<a href="#packages">components</a> directly.</p>
+URLs do not affect <a href="embedding.html">embedders</a> or
+<a href="packages.html">components</a> directly.</p>
 </div>
 <div class="paragraph">
 <p>If no path is present then the Cockpit will redirect to the default page
@@ -532,7 +532,7 @@ component is being shown from a non-local host.</p>
 </div>
 <div class="paragraph">
 <p>The next segment of the path, (or first if the component is being shown
-on the local host) is the <a href="#packages">package name</a>. The remainder of
+on the local host) is the <a href="packages.html">package name</a>. The remainder of
 the path is a component file in the package. If no further path segments
 are present, a default <code>index.html</code> component in the package is
 loaded. An extension of <code>.html</code> is automatically appended.</p>
@@ -546,7 +546,7 @@ component as the hash of its <a href="#urls-components">resource URL</a>.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-06-23 13:37:26 UTC
+Last updated 2026-07-30 14:19:47 UTC
 </div>
 </div>
 </body>

@@ -473,7 +473,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sectionbody">
 <div class="paragraph">
 <p>The <strong>cockpit-tls</strong> program is a TLS terminating HTTP proxy for
-<strong>cockpit-ws(8)</strong>. It manages a set of isolated cockpit-ws instances,
+<a href="cockpit-ws.8.html">cockpit-ws</a>(8). It manages a set of isolated cockpit-ws instances,
 one per TLS client certificate, plus one for TLS without a client
 certificate, and one for unencrypted HTTP. With that, one session cannot
 tamper with another one through possible security vulnerability
@@ -481,7 +481,7 @@ exploits.</p>
 </div>
 <div class="paragraph">
 <p>Users or administrators should never need to start this program as it
-automatically started by <strong>systemd(1)</strong> via socket activation.</p>
+automatically started by systemd(1) via socket activation.</p>
 </div>
 </div>
 </div>
@@ -492,7 +492,7 @@ automatically started by <strong>systemd(1)</strong> via socket activation.</p>
 <p>To specify the TLS certificate the web service should use, simply drop a
 file with the extension <strong>.cert</strong> in the <strong>/etc/cockpit/ws-certs.d</strong>
 directory, or below <strong>$XDG_CONFIG_DIRS</strong> if set (see
-<a href="./cockpit.conf.5.html">cockpit.conf</a>). If there are multiple files
+<a href="cockpit.conf.5.html">cockpit.conf</a>(5)). If there are multiple files
 in this directory, then the highest priority one is chosen after
 sorting.</p>
 </div>
@@ -593,7 +593,7 @@ client certificates. This variable is normally set by the
 <p>In addition, <strong>cockpit-tls</strong> will use the <strong>XDG_CONFIG_DIRS</strong>
 environment variable from the
 <a href="https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html">XDG
-basedir spec</a> to find its certificates and the <strong>cockpit.conf(5)</strong>
+basedir spec</a> to find its certificates and the <a href="cockpit.conf.5.html">cockpit.conf</a>(5)
 configuration file.</p>
 </div>
 </div>
@@ -619,14 +619,14 @@ configuration file.</p>
 <h2 id="_see_also">See also</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>cockpit-ws(8)</strong> , <strong>cockpit.conf(5)</strong> , <strong>systemd(1)</strong></p>
+<p><a href="cockpit-ws.8.html">cockpit-ws</a>(8) , <a href="cockpit.conf.5.html">cockpit.conf</a>(5) , systemd(1)</p>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-06-23 13:37:26 UTC
+Last updated 2026-07-30 14:19:47 UTC
 </div>
 </div>
 </body>
